@@ -18,16 +18,17 @@ const Header = () => {
   return (
     <header>
       <div className="bg-[#7E33E0] text-white text-xs py-2 px-4 flex justify-between items-center">
-        <div>
+        <div className="flex flex-wrap items-center gap-2 sm:gap-4">
           <span>mhhasanul@gmail.com</span>
-          <span className="ml-4">(12345)67890</span>
+          <span className="hidden sm:inline">(12345)67890</span>
         </div>
-        <div className="space-x-4">
-          <span>English</span>
-          <span>USD</span>
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          <span className="hidden sm:inline">English</span>
+          <span className="hidden sm:inline">USD</span>
           <Link to="/login" className="hover:text-white relative">
-          <span>Login</span> </Link>
-          <span>Wishlist</span>
+            <span>Login</span>
+          </Link>
+          <span className="hidden sm:inline">Wishlist</span>
           <Link to="/cart" className="hover:text-white relative">
             <span>🛒</span>
             {cart.length > 0 && (
@@ -38,19 +39,18 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <nav className="bg-white shadow flex items-center justify-between px-8 py-4">
-        <div className="text-2xl font-bold text-[#0D0E43]">Hekto</div>
-        <ul className="flex space-x-8 text-gray-700 font-medium">
-          <li><Link to="/" className="hover:text-[#FB2E86]">Home</Link></li>
-          <li><Link to="/about" className="hover:text-[#FB2E86]">About Us</Link></li>
-          <li><Link to="/products" className="hover:text-[#FB2E86]">Products</Link></li>
-          <li><Link to="/blog" className="hover:text-[#FB2E86]">Blog</Link></li>
-          {/* <li><Link to="/" className="hover:text-[#FB2E86]">Shop</Link></li> */}
-          <li><Link to="/contact" className="hover:text-[#FB2E86]">Contact</Link></li>
+      <nav className="bg-white shadow flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+        <div className="text-xl sm:text-2xl font-bold text-[#0D0E43]">Hekto</div>
+        <ul className="flex space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 text-gray-700 font-medium text-sm sm:text-base">
+          <li><Link to="/" className="hover:text-[#FB2E86] whitespace-nowrap">Home</Link></li>
+          <li><Link to="/about" className="hover:text-[#FB2E86] whitespace-nowrap">About Us</Link></li>
+          <li><Link to="/products" className="hover:text-[#FB2E86] whitespace-nowrap">Products</Link></li>
+          <li><Link to="/blog" className="hover:text-[#FB2E86] whitespace-nowrap">Blog</Link></li>
+          <li><Link to="/contact" className="hover:text-[#FB2E86] whitespace-nowrap">Contact</Link></li>
         </ul>
         <div className="flex items-center border rounded overflow-hidden">
-          <input className="px-2 py-1 outline-none" placeholder="Search..." />
-          <button className="bg-[#FB2E86] px-3 py-1 text-white">🔍</button>
+          <input className="px-2 py-1 outline-none w-16 sm:w-24 md:w-32" placeholder="Search..." />
+          <button className="bg-[#FB2E86] px-2 sm:px-3 py-1 text-white">🔍</button>
         </div>
       </nav>
     </header>
