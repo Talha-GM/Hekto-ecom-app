@@ -30,7 +30,7 @@ const Header = () => {
           </Link>
           <span className="hidden sm:inline">Wishlist</span>
           <Link to="/cart" className="hover:text-white relative">
-            <span>🛒</span>
+            <span>🛒Cart</span>
             {cart.length > 0 && (
               <span className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                 {cart.length}
@@ -48,7 +48,7 @@ const Header = () => {
           <li><Link to="/blog" className="hover:text-[#FB2E86] whitespace-nowrap">Blog</Link></li>
           <li><Link to="/contact" className="hover:text-[#FB2E86] whitespace-nowrap">Contact</Link></li>
         </ul>
-        <div className="flex items-center border rounded overflow-hidden">
+        <div className="hidden md:flex items-center border rounded overflow-hidden">
           <input className="px-2 py-1 outline-none w-16 sm:w-24 md:w-32" placeholder="Search..." />
           <button className="bg-[#FB2E86] px-2 sm:px-3 py-1 text-white">🔍</button>
         </div>
